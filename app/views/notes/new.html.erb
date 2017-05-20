@@ -1,0 +1,14 @@
+<% if @note.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2><%= @note.errors.count %>件のエラーがあります。</h2>
+
+      <ul>
+        <% @note.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+        <% end %>
+
+      </ul>
+    </div>
+<% end %>
+<h1>新規投稿する</h1>
+<%= render 'form' %>

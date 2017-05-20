@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gatebook</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header class="navbar">
+    <div class="container">
+      <div id="logo">Gatebook</div>
+      <ul class="header-right">
+        <li><%= link_to "Top", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "New", new_note_path %></li>
+        <li><%= link_to "Index", notes_path %></li>
+        <li><%= link_to "ユーザー一覧", users_path %></li>
+      </ul>
+    </div>
+  </header>
+
+  <%= yield %>
+  </body>
+</html>
